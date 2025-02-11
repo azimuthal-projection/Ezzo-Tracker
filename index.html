@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezzo Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 500px; width: 100%; }
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #info { margin: 20px; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>EZZO TRACKER</h1>
+    <div id="map"></div>
+    <div id="info">
+        <h2><b>IS YOUR CHURCH SUPPORTING CHILD ABUSE</b></h2>
+        <p>We are a group of wild dreamers and troublemakers who could not be broken<br>
+        We are survivors of the dangerous authoritarian Gary Ezzo Teachings<br> Your church may call it 
+        Babywise or Growing Kids Gods Way, but we lived it and we call it abuse. <br> The above 
+        map is our best effort to track the spread of these teachings around the globe<br>
+        If you have any information about the spread please emails us and email@mail.com<br>
+        If you would like more info about these teaching please see link.com</p>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([32.8995, -79.7910], 10); // Centered on Mount Pleasant, SC
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        fetch('events.json')
+            .then(response => response.json())
+            .then(data => {
+                data.events.forEach(event => {
+                    L.marker([event.lat, event.lng]).addTo(map)
+                        .bindPopup(`<b>${event.name}</b><br>${event.date}<br>${event.description}`);
+                });
+            })
+            .catch(error => console.error('Error loading events:', error));
+    </script>
+</body>
+</html>

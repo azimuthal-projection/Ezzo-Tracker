@@ -1,0 +1,18 @@
+{
+  "events": [
+    {
+      "name": "Community Meetup",
+      "date": "2025-02-20",
+      "description": "A gathering of local developers.",
+      "lat": 40.73061,
+      "lng": -73.935242
+    },
+    {
+      "name": "Outdoor Festival",
+      "date": "2025-03-05",
+      "description": "Live music and food trucks.",
+      "lat": 40.712776,
+      "lng": -74.005974
+    }
+  ]
+}
