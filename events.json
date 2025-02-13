@@ -48,6 +48,27 @@
       "description": "Promotes GFI Events",
       "lat": 39.5469472,
       "lng": -104.8858593
+    },
+    {
+      "name": "Victory Church - Tulsa, OK",
+      "link": "https://www.facebook.com/permalink.php?story_fbid=pfbid02mj9A8vRmCCUsGKtNtca9BRELGAytvxxdQWoyRB6dUbJ249Y9BzRtah7yyqe1UrSKl&id=203445766393335",
+      "description": "Promotes GFI books",
+      "lat": 36.0515775,
+      "lng": -95.9579723
+    },
+    {
+      "name": "Calvary Church - Maumee, OH",
+      "link": "https://web.archive.org/web/20220317230945/https://growingfamilies.life/ohio-conference",
+      "description": "Promotes GFI",
+      "lat": 41.5765759,
+      "lng": -83.6612289
+    },
+    {
+      "name": "Liberty Church - Broken Arrow, OK",
+      "link": "https://play.smilebox.com/SpreadMoreHappy/4e4449354d6a51334f54513d0d0a?title=Parenting+Conference&image=4e4449354d6a51334f54513d0d0a.jpg",
+      "description": "Promotes GFI",
+      "lat": 36.0630187,
+      "lng": -95.7836921
     }
   ]
 }
